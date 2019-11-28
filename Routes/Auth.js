@@ -6,7 +6,6 @@ const jsonwt = require("jsonwebtoken");
 const key = require("../Setup/url").secret;
 
 router.get("/userInfo", async (req, res) => {
-    console.log(req.session);
     if (req.session.user)
         return res.json({success: true, user: req.session.user});
 
@@ -67,6 +66,7 @@ router.post("/login", async (req, res) => {
 router.get("/logout", (req, res) => {
     req.session.destroy();
     req.logout();
+    return res.json({success: true});
 });
 
 module.exports = router;

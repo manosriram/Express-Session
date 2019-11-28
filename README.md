@@ -1,3 +1,3 @@
-### MERN Authentication.
+### Express Session.
 
-``` A Proper Authentication Strategy using MERN Stack. 💥```
+``` An Authentication Strategy using Express-Session for the Backend. 💥```

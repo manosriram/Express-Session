@@ -4,7 +4,9 @@ const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const db = require("./Setup/url").url;
 const cookieparser = require("cookie-parser");
+const session = require("express-session");
 
+app.use(session({secret:"mano1234", resave: false, saveUninitialized: true}));
 app.use(express.json());
 app.use(cookieparser());
 
